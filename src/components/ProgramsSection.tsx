@@ -1,3 +1,5 @@
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
 import { motion } from "framer-motion";
 export const ProgramsSection = () => {
   const programs = [
@@ -6,8 +8,7 @@ export const ProgramsSection = () => {
       description:
         "Three to five-minute stories with animal friends that teach belly-breathing, relaxation, and focus through imagination.",
       features: ["🏠 Cozy Corner", "🎵 Calm Music", "🏅 Sticker Badges"],
-      imageUrl:
-        "https://placehold.co/500x600/F3E8FF/A855F7?text=Little+Explorers",
+      imageUrl: img1,
       imageLeft: true,
     },
     {
@@ -16,7 +17,7 @@ export const ProgramsSection = () => {
         "Mindset stories, focus timers, and kindness practices that build confidence and classroom readiness.",
       features: ["⏱️ Focus Timer", "📝 Gratitude Notes", "🌟 Streak Rewards"],
       imageUrl:
-        "https://placehold.co/500x600/ECFDF5/10B981?text=Brave+Thinkers",
+        img2,
       imageLeft: false,
     },
     {
@@ -25,7 +26,7 @@ export const ProgramsSection = () => {
         "Longer meditations, reframing thoughts, and sleep stories for deeper rest and emotional balance.",
       features: ["🧠 Mindset Minis", "😴 Sleep Stories", "🃏 Goal Cards"],
       imageUrl:
-        "https://placehold.co/500x600/DBEAFE/3B82F6?text=Calm+%26+Curious",
+        img1,
       imageLeft: true,
     },
   ];
