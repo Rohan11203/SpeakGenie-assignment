@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export const ProgramsSection = () => {
   const programs = [
     {
@@ -32,14 +33,20 @@ export const ProgramsSection = () => {
   return (
     <section id="programs" className="py-12 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: false, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-12"
+        >
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
             Programs for Every Age
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
             Pick a track or mix and match. Each program grows with your child.
           </p>
-        </div>
+        </motion.div>
 
         <div className="space-y-20">
           {programs.map((program, index) => (
@@ -49,14 +56,26 @@ export const ProgramsSection = () => {
                 !program.imageLeft ? "md:flex-row-reverse" : ""
               }`}
             >
-              <div className="w-full md:w-1/2">
+              <motion.div
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full md:w-1/2"
+              >
                 <img
                   src={program.imageUrl}
                   alt={program.title}
                   className="rounded-2xl shadow-xl w-full h-auto object-cover"
                 />
-              </div>
-              <div className="w-full md:w-1/2 text-center md:text-left">
+              </motion.div>
+              <motion.div
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: false, amount: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full md:w-1/2 text-center md:text-left"
+              >
                 <h3 className="text-2xl font-bold text-gray-900">
                   {program.title}
                 </h3>
@@ -71,7 +90,7 @@ export const ProgramsSection = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export const WhyMinderyKids = () => {
   const infoCards = [
     {
@@ -22,7 +23,13 @@ export const WhyMinderyKids = () => {
 
   return (
     <section id="why" className="py-12 md:py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: false, amount: 0.5 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
           Why Mindery Kids?
         </h2>
@@ -47,7 +54,7 @@ export const WhyMinderyKids = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
