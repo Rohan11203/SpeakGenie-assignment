@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#", text: "Why" },
-    { href: "#", text: "Programs" },
-    { href: "#", text: "Features" },
-    { href: "#", text: "For Parents" },
-    { href: "#", text: "FAQ" },
+    { href: "#why", text: "Why" },
+    { href: "#programs", text: "Programs" },
+    { href: "#features", text: "Features" },
+    { href: "#for-parents", text: "For Parents" },
+    { href: "#faq", text: "FAQ" },
   ];
 
   const toggleMenu = () => {
@@ -22,12 +22,12 @@ const Navbar = () => {
     <nav className="bg-white/30 shadow-sm backdrop-blur-lg noto-sans-kr fixed top-0 left-0 right-0 z-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex-shrink-0 flex items-center">
+          <a href="#top" className="flex-shrink-0 flex items-center">
             <LogoIcon />
             <span className="ml-3 text-2xl font-bold text-gray-800">
               Topmind Care
             </span>
-          </div>
+          </a>
 
           <div className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link) => (
