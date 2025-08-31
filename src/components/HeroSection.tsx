@@ -37,7 +37,7 @@ export const HeroSection = () => {
     <>
       <motion.section
         id="top"
-        className="py-12 md:py-18 overflow-x-hidden"
+        className="py-12 md:py-18 "
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}

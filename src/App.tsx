@@ -25,7 +25,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className="bg-gray-50 min-h-screen">
+      <div className="bg-gray-50  min-h-screen overflow-x-hidden">
         <Navbar />
         <div className="pt-20">
           <HeroSection />
